@@ -1,8 +1,6 @@
-# RaspiDR Documentation
+# RaspiDR
 
-## Overview
-
-RaspiDR is a Go application designed for Raspberry Pi Zero 2W.
+Go application for Raspberry Pi Zero 2W.
 
 ## Getting Started
 
@@ -22,6 +20,10 @@ make build-pi
 make deploy PI_HOST=raspberrypi.local PI_USER=pi
 ```
 
-## Contents
+## Project Structure
 
-- [Index](index.md) - This page
+```
+cmd/raspidr/    - main application entry point
+internal/       - private application packages
+docs/           - documentation
+```
