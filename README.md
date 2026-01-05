@@ -22,7 +22,7 @@ make deploy PI_HOST=raspberrypi.local
 
 ## Documentation
 
-[https://flop.github.io/raspidr/](https://flop.github.io/raspidr/)
+[https://fl0p.github.io/raspidr/](https://fl0p.github.io/raspidr/)
 
 ## License
 
