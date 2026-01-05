@@ -7,19 +7,19 @@ PI_PATH?=/home/pi
 
 # Build for local machine
 build:
-	go build -o bin/$(BINARY_NAME) .
+	go build -o bin/$(BINARY_NAME) ./cmd/raspidr
 
 # Build for Raspberry Pi Zero 2W (ARM64)
 build-pi:
-	GOOS=linux GOARCH=arm64 go build -o bin/$(BINARY_NAME)-linux-arm64 .
+	GOOS=linux GOARCH=arm64 go build -o bin/$(BINARY_NAME)-linux-arm64 ./cmd/raspidr
 
 # Build for Raspberry Pi Zero 2W (32-bit, if using 32-bit OS)
 build-pi32:
-	GOOS=linux GOARCH=arm GOARM=7 go build -o bin/$(BINARY_NAME)-linux-arm .
+	GOOS=linux GOARCH=arm GOARM=7 go build -o bin/$(BINARY_NAME)-linux-arm ./cmd/raspidr
 
 # Run locally
 run:
-	go run .
+	go run ./cmd/raspidr
 
 # Deploy to Raspberry Pi
 deploy: build-pi

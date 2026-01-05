@@ -39,6 +39,11 @@ The Makefile supports customizable deployment targets:
 
 Override with: `make deploy PI_HOST=mypi.local PI_USER=admin`
 
-## Architecture
+## Project Structure
 
-Single-file Go application (`main.go`) with no external dependencies. Binaries are output to `bin/` directory.
+```
+cmd/raspidr/    - main application entry point
+internal/       - private application packages
+docs/           - documentation
+bin/            - compiled binaries (gitignored)
+```
